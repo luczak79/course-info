@@ -1,8 +1,11 @@
 package com.pluralsight.courseinfo.cli;
 
 import com.pluralsight.courseinfo.cli.service.CourseRetrieverService;
+import com.pluralsight.courseinfo.cli.service.PluralsightCourse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.List;
 
 public class CourseRetriever {
 
@@ -26,7 +29,7 @@ public class CourseRetriever {
     private static void retrieveCourses(String authorId) {
         LOG.info("Retrieving courses for author '{}'", authorId);
         CourseRetrieverService courseRetrieverService = new CourseRetrieverService();
-        String coursesToStore = courseRetrieverService.getCoursesFor(authorId);
-        LOG.info("Found {} courses", coursesToStore);
+        List<PluralsightCourse> coursesToStore = courseRetrieverService.getCoursesFor(authorId);
+        LOG.info("Retrived the following {} courses: {}", coursesToStore.size(), coursesToStore);
     }
 }
