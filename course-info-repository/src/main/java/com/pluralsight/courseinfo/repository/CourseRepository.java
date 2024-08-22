@@ -9,6 +9,8 @@ public interface CourseRepository {
     void saveCourse(Course course);
     List<Course> getAllCourses();
 
+    void addNotes(String id, String notes);
+
     static CourseRepository openCourseRepository(String databasefile) {
         return new CourseJdbcRepository(databasefile);
     }
