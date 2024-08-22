@@ -10,7 +10,7 @@ class CourseTest {
     @Test
     void rejectNullComponents() {
         assertThrows(IllegalArgumentException.class, () ->
-                new Course(null, null, 1, null, Optional.empty()));
+                new Course(null, null, 1, null, Optional.of("")));
     }
 
     @Test

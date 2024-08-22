@@ -9,6 +9,7 @@ public record Course(String id, String name, long length, String url, Optional<S
         filled(name);
         filled(url);
         notes.ifPresent(Course::filled);
+
     }
 
     private static void filled(String s) {
