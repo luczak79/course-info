@@ -65,4 +65,28 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.3.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <transformers implementaion="org.apache.maven.plugins.shade.resource.MainfestResourceTransformer">
+                                <mainClass>com.pluralsight.courseinfo.server.CourseServer</mainClass>
+                            </transformers>
+                            <transformers implementaion="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
