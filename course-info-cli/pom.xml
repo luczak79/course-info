@@ -11,12 +11,6 @@
 
     <artifactId>course-info-cli</artifactId>
 
-    <properties>
-        <sfl4j.version>1.7.36</sfl4j.version>
-        <jackson.version>2.13.3</jackson.version>
-        <junit.version>5.8.2</junit.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>com.pluralsight</groupId>
@@ -26,29 +20,22 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>${sfl4j.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>${sfl4j.version}</version>
-            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>${jackson.version}</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
-            <version>${jackson.version}</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 
